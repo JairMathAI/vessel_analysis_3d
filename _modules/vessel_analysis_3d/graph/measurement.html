@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>vessel_analysis_3d.graph.measurement &mdash; 3D Vascular Structure Analysis 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            3D Vascular Structure Analysis
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#stable-release">Stable release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#from-sources">From sources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">Package modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../vessel_analysis_3d.html">vessel_analysis_3d package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../vessel_analysis_3d.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../vessel_analysis_3d.bin.html">vessel_analysis_3d.bin package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../vessel_analysis_3d.graph.html">vessel_analysis_3d.graph package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../vessel_analysis_3d.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../vessel_analysis_3d.html#module-vessel_analysis_3d.processing_pipeline">vessel_analysis_3d.processing_pipeline module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../vessel_analysis_3d.html#vessel_analysis_3d.processing_pipeline.Pipeline3D"><code class="docutils literal notranslate"><span class="pre">Pipeline3D</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../vessel_analysis_3d.html#module-vessel_analysis_3d">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../vessel_analysis_3d.html#vessel_analysis_3d.get_module_version"><code class="docutils literal notranslate"><span class="pre">get_module_version()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing.html#get-started">Get Started!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing.html#deploying">Deploying</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">3D Vascular Structure Analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+          <li class="breadcrumb-item"><a href="../../vessel_analysis_3d.html">vessel_analysis_3d</a></li>
+      <li class="breadcrumb-item active">vessel_analysis_3d.graph.measurement</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for vessel_analysis_3d.graph.measurement</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+
+<div class="viewcode-block" id="getLength">
+<a class="viewcode-back" href="../../../vessel_analysis_3d.graph.html#vessel_analysis_3d.graph.measurement.getLength">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">getLength</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Find length of a path as distance between nodes in it</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    path : list</span>
+<span class="sd">        list of nodes in the path</span>
+
+<span class="sd">    dimensions : list</span>
+<span class="sd">        list with pixel dimensions in desired unit (e.g. microns)</span>
+<span class="sd">        3D: [z, y, x]   2D: [y, x]</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    length : float</span>
+<span class="sd">        Length of path</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+            <span class="n">item2</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">vect</span> <span class="o">=</span> <span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">item2</span><span class="p">)]</span>
+        <span class="n">vect</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">vect</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">)</span>
+        <span class="p">]</span>  <span class="c1"># multiply pixel length with original length</span>
+        <span class="n">length</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vect</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">length</span></div>
+
+
+
+<div class="viewcode-block" id="getRadius">
+<a class="viewcode-back" href="../../../vessel_analysis_3d.graph.html#vessel_analysis_3d.graph.measurement.getRadius">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">getRadius</span><span class="p">(</span><span class="n">distTrans</span><span class="p">,</span> <span class="n">segment</span><span class="p">):</span>
+    <span class="n">sumRadii</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">skelPt</span> <span class="ow">in</span> <span class="n">segment</span><span class="p">:</span>
+        <span class="n">sumRadii</span> <span class="o">+=</span> <span class="n">distTrans</span><span class="p">[</span><span class="n">skelPt</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">sumRadii</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">segment</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="getVolumeCylinder">
+<a class="viewcode-back" href="../../../vessel_analysis_3d.graph.html#vessel_analysis_3d.graph.measurement.getVolumeCylinder">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">getVolumeCylinder</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="n">segLength</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">segLength</span></div>
+
+
+
+<div class="viewcode-block" id="getVolume">
+<a class="viewcode-back" href="../../../vessel_analysis_3d.graph.html#vessel_analysis_3d.graph.measurement.getVolume">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">getVolume</span><span class="p">(</span><span class="n">skelRadii</span><span class="p">,</span> <span class="n">segment</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">):</span>
+    <span class="n">volume</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">skelPt</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">segment</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">segment</span><span class="p">):</span>
+            <span class="n">vect</span> <span class="o">=</span> <span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">skelPt</span><span class="p">,</span> <span class="n">segment</span><span class="p">[</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])]</span>
+            <span class="n">vect</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">vect</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">)</span>
+            <span class="p">]</span>  <span class="c1"># multiply with pixel dimensions</span>
+            <span class="n">rad</span> <span class="o">=</span> <span class="n">skelRadii</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">skelPt</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">skelPt</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">skelPt</span><span class="p">[</span><span class="mi">2</span><span class="p">])]</span>
+            <span class="n">volume</span> <span class="o">+=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">rad</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vect</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">volume</span></div>
+
+
+
+<div class="viewcode-block" id="get_z_angle">
+<a class="viewcode-back" href="../../../vessel_analysis_3d.graph.html#vessel_analysis_3d.graph.measurement.get_z_angle">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_z_angle</span><span class="p">(</span><span class="n">segment</span><span class="p">,</span> <span class="n">pixelDims</span><span class="p">):</span>
+    <span class="n">zVector</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="n">v1</span> <span class="o">=</span> <span class="n">segment</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="p">(</span>
+        <span class="n">segment</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">segment</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">segment</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="p">):</span>  <span class="c1"># in case of a circle, take pre-last point</span>
+        <span class="n">v2</span> <span class="o">=</span> <span class="n">segment</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">segment</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">v2</span> <span class="o">=</span> <span class="n">segment</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">segment</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">dist_v1_z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v1</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="n">dist_v2_z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v2</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+
+    <span class="k">if</span> <span class="n">dist_v1_z</span> <span class="o">&lt;</span> <span class="n">dist_v2_z</span><span class="p">:</span>
+        <span class="n">segVector</span> <span class="o">=</span> <span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">)]</span>  <span class="c1"># v2-v1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">segVector</span> <span class="o">=</span> <span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">v2</span><span class="p">,</span> <span class="n">v1</span><span class="p">)]</span>  <span class="c1"># v1-v2</span>
+
+    <span class="n">segVector</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">segVector</span><span class="p">,</span> <span class="n">pixelDims</span><span class="p">)]</span>
+
+    <span class="n">cosine_angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">zVector</span><span class="p">,</span> <span class="n">segVector</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">zVector</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">segVector</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">cosine_angle</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">angle</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jianxu Chen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
